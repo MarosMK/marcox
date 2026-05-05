@@ -1,0 +1,277 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-image: url("ima.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+
+.site-header {
+  border-radius: 10px;
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.site-logo a {
+  color: #262626;
+  text-decoration: none;
+}
+
+/* ── Tagline ─────────────────────────────────────────────── */
+
+.site-tagline {
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.site-tagline h2 {
+  margin: 0 20px 5px 40px;
+  color: #262626;
+  font-size: 15px;
+}
+
+/* ── Products grid ───────────────────────────────────────── */
+
+.products-grid {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 25px;
+  max-width: 1040px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* ── Product card ────────────────────────────────────────── */
+
+.product-card {
+  border-bottom: 1px solid #c4eed2;
+}
+
+.product-card:last-child {
+  border-bottom: none;
+}
+
+.product-card__image {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  max-width: 50%;
+}
+
+.product-card__title {
+  color: #009933;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.product-features {
+  margin: 30px 0 10px;
+  color: #262626;
+}
+
+.product-features__title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  padding: 15px 0;
+  border-top: 1px solid #c4eed2;
+}
+
+.product-features__description {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  padding: 10px 0;
+  border-top: 1px solid #c4eed2;
+  border-bottom: 1px solid #c4eed2;
+}
+
+.btn-download {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 15px 35px;
+  border: 1px solid #02ad3b;
+  border-radius: 10px;
+  color: #009933;
+  text-decoration: none;
+  transition: background-color 200ms ease-in-out;
+}
+
+.btn-download:hover,
+.btn-download:focus {
+  background-color: #c3eed1;
+}
+
+.btn-video {
+  display: block;
+  padding: 0 0 20px;
+  color: #262626;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ── Contact bar ─────────────────────────────────────────── */
+
+.contact-bar p {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+
+.site-footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.row span a {
+  text-decoration: none;
+}
+
+.row span a:hover {
+  color: white;
+}
+
+/* ── Desktop layout (≥1040px) ────────────────────────────── */
+
+@media (min-width: 1040px) {
+  body {
+    background-repeat: repeat;
+    justify-content: flex-start;
+  }
+
+  .site-header {
+    border-radius: 0;
+    padding: 10px 0 0 0;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 64px;
+  }
+
+  .site-logo {
+    margin: 20px 20px 10px 40px;
+    color: #262626;
+    font-size: 64px;
+  }
+
+  .site-tagline {
+    border-radius: 0;
+    padding: 0 0 10px 0;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 64px;
+  }
+
+  .site-tagline h2 {
+    margin: 0 20px 5px 40px;
+    font-size: 15px;
+    padding: 0 0 0 5px;
+  }
+
+  .products-grid {
+    flex-direction: row;
+    margin: 10px 0 20px;
+  }
+
+  .contact-bar {
+    flex-direction: row;
+    margin: 10px 0 100px;
+  }
+
+  .product-card {
+    border-bottom: none;
+    border-right: 1px solid #c4eed2;
+    padding: 30px;
+    width: 360px;
+  }
+
+  .product-card:last-child {
+    border-right: none;
+  }
+
+  .product-card__image {
+    margin-bottom: 25px;
+    max-width: 100%;
+  }
+}
