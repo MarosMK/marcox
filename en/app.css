@@ -1,0 +1,337 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-image: url("ima.jpg"); 
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width:100%;
+  flex-direction: column;
+  background-size: cover;
+}
+
+.panel1 {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 15px 25px;
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  letter-spacing: 1px;
+  font-size: 32px;
+  flex-direction: column-reverse;
+  font-family: 'Open Sans', sans-serif;
+  /*text-transform: uppercase;*/
+}
+
+.panel11 {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px 10px;
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  letter-spacing: 1px;
+  font-size: 32px;
+  flex-direction: column-reverse;
+  font-family: 'Open Sans', sans-serif;
+  /*text-transform: uppercase;*/
+}
+
+.panel2 {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 25px;
+  max-width: 1040px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /*text-transform: uppercase;*/
+}
+
+footer{
+  text-align: center;
+  background-color: transparent;
+  padding: 20px 0 20px 0;
+}
+
+.text11 {
+  margin: 0px 20px 5px 40px;
+  color: #262626;
+  font-size: 15px;
+}
+
+.text3 {
+  margin: 30px 0 10px;
+  color: #262626;
+}
+
+.text2 {
+  margin: 0px 10px 10px 10px;
+  color: #262626;
+  align-self: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.text2 li {
+  display: inline;
+  
+}
+.text2 li a{
+  text-decoration:none;
+  color: #262626;
+  padding:5px;
+  border-left: 1.5px solid #262626;
+}
+
+.spreadsheet {
+  border-bottom: 1px solid #c4eed2;
+}
+
+.spreadsheet:last-child {
+  border-bottom: none;
+}
+
+.spreadsheet-img {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  max-width: 50%;
+}
+
+.spreadsheet-header {
+  color: #009933;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.text-item {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 15px 0;
+  border-top: 1px solid #c4eed2;
+}
+
+.text-item1 {
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 10px 0;
+  border-top: 1px solid #c4eed2;
+}
+
+.text-item:last-child{
+  border-bottom: 1px solid #c4eed2;
+}
+
+
+
+.spreadsheet-video {
+  color: #262626; 
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  padding: 0 0 20px;
+}
+
+.spreadsheet-button {
+  border: 1px solid #02ad3b;
+  border-radius: 10px;
+  color: #009933;
+  display: inline-block;
+  padding: 15px 35px;
+  text-decoration: none;
+  margin: 15px 0;
+  transition: background-color 200ms ease-in-out;
+}
+
+.spreadsheet-button:hover, .spreadsheet-button:focus {
+  background-color: #c3eed1;
+}
+
+.spreadsheet-button.is-featured {
+  background-color: #009933;
+  color: white;
+}
+
+.spreadsheet-button.is-featured:hover, .spreadsheet-button.is-featured:focus{
+  background-color: #009933;
+  color: white;
+}
+
+.text2 li a:hover{
+  color: white;
+  background-color: transparent;
+}
+
+.text1 a{
+  color: #262626;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.row span a{
+  text-decoration: none;
+  
+}
+.row span a:hover{
+  color: white;
+  
+}
+
+
+@media (min-width: 1040px){
+  body {
+    background-image: url("ima.jpg"); 
+    background-repeat: repeat;  
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width:100%;
+    
+  }
+  .panel2 {
+    flex-direction: row;
+    margin: 10px 0px 20px;
+  }
+
+  .panel3 {
+    flex-direction: row;
+    margin: 10px 0px 100px;
+  }
+
+  .spreadsheet {
+    border-bottom: none;
+    border-right: 1px solid #c4eed2;
+    padding: 30px 30px;
+    width: 360px;
+  }
+  .spreadsheet:last-child {
+    border-right: none;
+  }
+  .spreadsheet-img {
+    margin-bottom: 25px;
+    max-width: 100%;
+  }
+  .panel1 {
+    background-color: transparent;
+    border-radius: 0;
+    padding:  10px 0 0px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 64px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    /*text-transform: uppercase;*/
+  }
+
+  .panel11 {
+    background-color: transparent;
+    border-radius: 0;
+    padding:  0px 0 10px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 64px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    /*text-transform: uppercase;*/
+  }
+  
+  .text2 {
+    margin: 10px 20px 80px 10px;
+    font-size: 15px;
+    text-align: right;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .text2 li {
+    display:inline
+    
+  }
+  .text2 li a{
+    text-decoration:none;
+    color: #262626;
+    padding:5px;
+    border-left: 1.5px solid #262626;
+  }
+
+  .text1 {
+    margin: 20px 20px 10px 40px;
+    color: #262626;
+    font-size: 64px;
+  }
+
+  .text11 {
+    margin: 0px 20px 5px 40px;
+    color: #262626;
+    font-size: 15px;
+    padding:0 0 0px 5px;
+  }
+
+
+}
