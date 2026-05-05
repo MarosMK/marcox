@@ -70,13 +70,11 @@ body {
 /* ── Header ──────────────────────────────────────────────── */
 
 .site-header {
-  background-color: transparent;
   border-radius: 10px;
   padding: 15px 25px;
   display: flex;
   flex-direction: column-reverse;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
   font-size: 32px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -84,52 +82,24 @@ body {
 
 .site-logo a {
   color: #262626;
-  background-color: transparent;
   text-decoration: none;
-}
-
-.site-nav ul {
-  margin: 0px 10px 10px 10px;
-  color: #262626;
-  align-self: center;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.site-nav li {
-  display: inline;
-}
-
-.site-nav li a {
-  text-decoration: none;
-  color: #262626;
-  padding: 5px;
-  border-left: 1.5px solid #262626;
-}
-
-.site-nav li a:hover {
-  color: white;
-  background-color: transparent;
 }
 
 /* ── Tagline ─────────────────────────────────────────────── */
 
 .site-tagline {
-  background-color: transparent;
   border-radius: 10px;
-  padding: 10px 10px;
+  padding: 10px;
   display: flex;
   flex-direction: column-reverse;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
   font-size: 32px;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
 .site-tagline h2 {
-  margin: 0px 20px 5px 40px;
+  margin: 0 20px 5px 40px;
   color: #262626;
   font-size: 15px;
 }
@@ -208,17 +178,6 @@ body {
   background-color: #c3eed1;
 }
 
-.btn-download.is-featured {
-  background-color: #009933;
-  color: white;
-}
-
-.btn-download.is-featured:hover,
-.btn-download.is-featured:focus {
-  background-color: #009933;
-  color: white;
-}
-
 .btn-video {
   display: block;
   padding: 0 0 20px;
@@ -242,7 +201,6 @@ body {
 .site-footer {
   padding: 20px 0;
   text-align: center;
-  background-color: transparent;
 }
 
 .row span a {
@@ -257,26 +215,17 @@ body {
 
 @media (min-width: 1040px) {
   body {
-    background-image: url("ima.jpg");
     background-repeat: repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-start;
-    width: 100%;
   }
 
   .site-header {
-    background-color: transparent;
     border-radius: 0;
     padding: 10px 0 0 0;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     font-size: 64px;
-    font-weight: 600;
-    letter-spacing: 1px;
   }
 
   .site-logo {
@@ -285,41 +234,17 @@ body {
     font-size: 64px;
   }
 
-  .site-nav ul {
-    margin: 10px 20px 80px 10px;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-align: right;
-  }
-
-  .site-nav li {
-    display: inline;
-  }
-
-  .site-nav li a {
-    text-decoration: none;
-    color: #262626;
-    padding: 5px;
-    border-left: 1.5px solid #262626;
-  }
-
   .site-tagline {
-    background-color: transparent;
     border-radius: 0;
     padding: 0 0 10px 0;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
     font-size: 64px;
-    font-weight: 600;
-    letter-spacing: 1px;
   }
 
   .site-tagline h2 {
-    margin: 0px 20px 5px 40px;
-    color: #262626;
+    margin: 0 20px 5px 40px;
     font-size: 15px;
     padding: 0 0 0 5px;
   }
