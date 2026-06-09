@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcox</title>
+    <link rel="stylesheet" href="en/css.css">
+    <link rel="stylesheet" href="en/app.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1 class="site-logo"><a href="https://www.marcox.sk">Marcox</a></h1>
+    </header>
+
+    <section class="site-tagline">
+        <h2>Automated Excels</h2>
+    </section>
+
+    <main class="products-grid" id="products-grid"></main>
+
+    <div class="contact-bar">
+        <p>Contact: info@marcox.sk</p>
+    </div>
+
+    <footer class="site-footer">
+        <div class="row">
+            <span>© Copyright Travis Williamson 2021. |</span>
+            <span>Design by <a href="https://www.codepen.io/">CodePen</a></span>
+            <span>| gradient PNG Designed By 588ku from <a href="https://pngtree.com">Pngtree.com</a></span>
+        </div>
+    </footer>
+    <script>
+        const API_URL = 'http://localhost:3000/projects';
+
+        async function loadProducts() {
+            const grid = document.getElementById('products-grid');
+            try {
+                const response = await fetch(API_URL);
+                const projects = await response.json();
+                console.log('API response:', projects);
+
+                grid.innerHTML = projects.map(p => `
+                    <article class="product-card">
+                        <img src="en/icons/${p.icon}" alt="${p.title}" class="product-card__image">
+                        <h2 class="product-card__title">${p.title}</h2>
+                        <ul class="product-features">
+                            <li class="product-features__title">${p.feature_title}</li>
+                            <li class="product-features__description">${p.description}</li>
+                        </ul>
+                        <a href="en/excels/${p.excel_file}" class="btn-download">Download</a>
+                        <a href="en/videos/${p.video_file}" class="btn-video" target="_blank" rel="noopener">Play Video &#9658;</a>
+                    </article>
+                `).join('');
+            } catch (err) {
+                console.error('Failed to load products:', err);
+                grid.innerHTML = '<p style="text-align:center;color:red;">Could not load products.</p>';
+            }
+        }
+
+        loadProducts();
+    </script>
+    <script>
+        fetch("http://localhost:3000/projects")
+            .then(res => res.json())
+            .then(data => console.log(data));
+    </script>
+</body>
+
+</html>
