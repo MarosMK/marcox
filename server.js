@@ -10,8 +10,13 @@ app.use(express.static("public"));
 
 // Get projects from database
 app.get("/projects", async (req, res) => {
-    const result = await db.query("SELECT * FROM Projects");
-    res.json(result.recordset);
+    try {
+        const result = await db.query("SELECT * FROM Projects");
+        res.json(result.recordset);
+    } catch (err) {
+        console.error("DB error:", err.message);
+        res.status(500).json({ error: err.message });
+    }
 });
 
 const port = process.env.PORT || 3000;
