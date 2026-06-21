@@ -1,10 +1,10 @@
 const sql = require("mssql");
 
 const config = {
-    user: "marcox-db",
-    password: "database1@",
-    server: "marcox-sql-2026.database.windows.net",
-    database: "marcox-db",
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    server: process.env.DB_SERVER,
+    database: process.env.DB_NAME,
     options: {
         encrypt: true,
         trustServerCertificate: false
