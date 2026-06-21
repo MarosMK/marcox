@@ -35,7 +35,7 @@
         async function loadProducts() {
             const grid = document.getElementById('products-grid');
             try {
-                const response = await fetch('http://localhost:3000/projects');
+                const response = await fetch('/projects');
                 const projects = await response.json();
 
                 grid.innerHTML = projects.map(p => `
